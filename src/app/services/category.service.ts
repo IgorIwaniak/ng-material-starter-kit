@@ -8,7 +8,7 @@ export class CategoryService {
   constructor(private _httpClient: HttpClient) {
   }
 
-  getAll(): Observable<ProductModel[]> {
-    return this._httpClient.get<ProductModel[]>('https://fakestoreapi.com/products/categories');
+  getAll(): Observable<string[]> {
+    return this._httpClient.get<string[]>('https://fakestoreapi.com/products/categories');
   }
 }
