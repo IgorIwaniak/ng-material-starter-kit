@@ -9,7 +9,8 @@
     "test": "ng test"
   },
   "private": true,
-  "dependencies": {
+  "dependencies": {"prettier": "^2.6.2",
+    "eslint-config-prettier": "8.1.0",
     "@angular/animations": "^14.2.2",
     "@angular/cdk": "^14.2.2",
     "@angular/common": "^14.2.2",
