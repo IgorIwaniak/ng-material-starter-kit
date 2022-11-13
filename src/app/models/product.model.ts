@@ -5,4 +5,5 @@ export interface ProductModel {
   readonly category: string;
   readonly description: string;
   readonly image: string;
+  readonly symbol: string
 }
