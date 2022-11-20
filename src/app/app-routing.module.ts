@@ -10,6 +10,7 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CatComponent } from './components/cat/cat.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesComponentModule } from './components/categories/categories.component-module';
@@ -28,6 +29,8 @@ import { LoginFormComponentModule } from './components/login-form/login-form.com
 import { LoginServiceModule } from './services/login.service-module';
 import { RegisterComponentModule } from './components/register/register.component-module';
 import { RegisterServiceModule } from './services/register.service-module';
+import { CatComponentModule } from './components/cat/cat.component-module';
+import { CatServiceModule } from './services/cat.service-module';
 
 @NgModule({
   imports: [
@@ -42,6 +45,7 @@ import { RegisterServiceModule } from './services/register.service-module';
       { path: 'create-employee', component: EmployeeFormComponent },
       { path: 'login', component: LoginFormComponent },
       { path: 'register', component: RegisterComponent },
+      { path: 'cat-fact', component: CatComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -61,7 +65,9 @@ import { RegisterServiceModule } from './services/register.service-module';
     LoginServiceModule,
     RegisterComponentModule,
     RegisterServiceModule,
+    CatComponentModule,
+    CatServiceModule
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
