@@ -11,6 +11,8 @@ import { EmployeeFormComponent } from './components/employee-form/employee-form.
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CatComponent } from './components/cat/cat.component';
+import { CreateAgeComponent } from './components/create-age/create-age.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesComponentModule } from './components/categories/categories.component-module';
@@ -31,6 +33,10 @@ import { RegisterComponentModule } from './components/register/register.componen
 import { RegisterServiceModule } from './services/register.service-module';
 import { CatComponentModule } from './components/cat/cat.component-module';
 import { CatServiceModule } from './services/cat.service-module';
+import { CreateAgeComponentModule } from './components/create-age/create-age.component-module';
+import { AgeServiceModule } from './services/age.service-module';
+import { ProductDetailComponentModule } from './components/product-detail/product-detail.component-module';
+import { ProductDetailsServiceModule } from './services/product-details.service-module';
 
 @NgModule({
   imports: [
@@ -45,7 +51,9 @@ import { CatServiceModule } from './services/cat.service-module';
       { path: 'create-employee', component: EmployeeFormComponent },
       { path: 'login', component: LoginFormComponent },
       { path: 'register', component: RegisterComponent },
-      { path: 'cat-fact', component: CatComponent }
+      { path: 'cat-fact', component: CatComponent },
+      { path: 'age/:name', component: CreateAgeComponent },
+      { path: 'product/:id', component: ProductDetailComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -66,7 +74,11 @@ import { CatServiceModule } from './services/cat.service-module';
     RegisterComponentModule,
     RegisterServiceModule,
     CatComponentModule,
-    CatServiceModule
+    CatServiceModule,
+    CreateAgeComponentModule,
+    AgeServiceModule,
+    ProductDetailComponentModule,
+    ProductDetailsServiceModule
   ],
   exports: [RouterModule],
 })
