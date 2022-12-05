@@ -13,6 +13,11 @@ import { RegisterComponent } from './components/register/register.component';
 import { CatComponent } from './components/cat/cat.component';
 import { CreateAgeComponent } from './components/create-age/create-age.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { CartDetailComponent } from './components/cart-detail/cart-detail.component';
+import { UserComponent } from './components/user/user.component';
+import { TestComponent } from './components/test/test.component';
+import { CountryComponent } from './components/country/country.component';
+import { JokeComponent } from './components/joke/joke.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesComponentModule } from './components/categories/categories.component-module';
@@ -37,6 +42,16 @@ import { CreateAgeComponentModule } from './components/create-age/create-age.com
 import { AgeServiceModule } from './services/age.service-module';
 import { ProductDetailComponentModule } from './components/product-detail/product-detail.component-module';
 import { ProductDetailsServiceModule } from './services/product-details.service-module';
+import { CartDetailComponentModule } from './components/cart-detail/cart-detail.component-module';
+import { CartDetailServiceModule } from './services/cart-detail.service-module';
+import { UserComponentModule } from './components/user/user.component-module';
+import { UserServiceModule } from './services/user.service-module';
+import { TestComponentModule } from './components/test/test.component-module';
+import { TestServiceModule } from './services/test.service-module';
+import { CountryComponentModule } from './components/country/country.component-module';
+import { CountryServiceModule } from './services/country.service-module';
+import { JokeComponentModule } from './components/joke/joke.component-module';
+import { JokeServiceModule } from './services/joke.service-module';
 
 @NgModule({
   imports: [
@@ -53,7 +68,13 @@ import { ProductDetailsServiceModule } from './services/product-details.service-
       { path: 'register', component: RegisterComponent },
       { path: 'cat-fact', component: CatComponent },
       { path: 'age/:name', component: CreateAgeComponent },
-      { path: 'product/:id', component: ProductDetailComponent }
+      { path: 'product/:id', component: ProductDetailComponent },
+      { path: 'cart/:id', component: CartDetailComponent },
+      { path: 'cart', component: CartDetailComponent },
+      { path: 'user/:id', component: UserComponent },
+      { path: 'test', component: TestComponent },
+      { path: 'country/:name', component: CountryComponent },
+      { path: 'joke', component: JokeComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -78,7 +99,17 @@ import { ProductDetailsServiceModule } from './services/product-details.service-
     CreateAgeComponentModule,
     AgeServiceModule,
     ProductDetailComponentModule,
-    ProductDetailsServiceModule
+    ProductDetailsServiceModule,
+    CartDetailComponentModule,
+    CartDetailServiceModule,
+    UserComponentModule,
+    UserServiceModule,
+    TestComponentModule,
+    TestServiceModule,
+    CountryComponentModule,
+    CountryServiceModule,
+    JokeComponentModule,
+    JokeServiceModule
   ],
   exports: [RouterModule],
 })

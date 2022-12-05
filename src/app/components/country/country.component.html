@@ -1,0 +1,6 @@
+<mat-card><mat-card-title></mat-card-title>
+  <mat-card-content>
+  <ng-container *ngIf="data$ | async as item">{{ item.name }}
+<p *ngFor="let c of item.country">{{c.country_id}}</p>
+  </ng-container>
+  </mat-card-content></mat-card>

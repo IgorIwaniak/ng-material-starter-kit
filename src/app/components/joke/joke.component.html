@@ -1,0 +1,5 @@
+<mat-card><mat-card-title>Jokes</mat-card-title>
+  <mat-card-content><ng-container *ngIf="data$ | async as item">{{item.setup}}{{item.punchline}}</ng-container>
+
+  </mat-card-content>
+</mat-card>
