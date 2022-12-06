@@ -10,7 +10,7 @@ import { ProductsService } from '../../services/products.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductListComponent {
-  readonly list$: Observable<ProductModel[]> = this._productsService.getAll();
+  readonly product$: Observable<ProductModel[]> = this._productsService.getAll();
 
   constructor(private _productsService: ProductsService) {
   }

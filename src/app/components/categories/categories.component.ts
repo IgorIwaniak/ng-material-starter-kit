@@ -9,7 +9,7 @@ import { CategoryService } from "../../services/category.service";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CategoriesComponent {
-  readonly list$: Observable<string[]> = this._categoriesService.getAll();
+  readonly categories$: Observable<string[]> = this._categoriesService.getAll();
 
   constructor(private _categoriesService: CategoryService) {
   }

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ProductListComponent } from './components/product-list/product-list.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CryptoComponent } from './components/crypto/crypto.component';
 import { PublicHolidaysComponent } from './components/public-holidays/public-holidays.component';
@@ -18,6 +17,8 @@ import { UserComponent } from './components/user/user.component';
 import { TestComponent } from './components/test/test.component';
 import { CountryComponent } from './components/country/country.component';
 import { JokeComponent } from './components/joke/joke.component';
+import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
+import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesComponentModule } from './components/categories/categories.component-module';
@@ -52,11 +53,12 @@ import { CountryComponentModule } from './components/country/country.component-m
 import { CountryServiceModule } from './services/country.service-module';
 import { JokeComponentModule } from './components/joke/joke.component-module';
 import { JokeServiceModule } from './services/joke.service-module';
+import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
+import { SortedProductListComponentModule } from './components/sorted-product-list/sorted-product-list.component-module';
 
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      { path: 'products', component: ProductListComponent },
       { path: 'categories', component: CategoriesComponent },
       { path: 'crypto', component: CryptoComponent },
       { path: 'public-holidays', component: PublicHolidaysComponent },
@@ -74,7 +76,10 @@ import { JokeServiceModule } from './services/joke.service-module';
       { path: 'user/:id', component: UserComponent },
       { path: 'test', component: TestComponent },
       { path: 'country/:name', component: CountryComponent },
-      { path: 'joke', component: JokeComponent }
+      { path: 'joke', component: JokeComponent },
+      { path: 'products/:category', component: FilteredProductListComponent },
+      { path: 'products', component: FilteredProductListComponent },
+      { path: 'productss', component: SortedProductListComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -109,7 +114,9 @@ import { JokeServiceModule } from './services/joke.service-module';
     CountryComponentModule,
     CountryServiceModule,
     JokeComponentModule,
-    JokeServiceModule
+    JokeServiceModule,
+    FilteredProductListComponentModule,
+    SortedProductListComponentModule
   ],
   exports: [RouterModule],
 })
