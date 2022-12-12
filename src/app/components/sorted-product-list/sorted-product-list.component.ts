@@ -31,6 +31,6 @@ public orders: Observable<string[]> = of(['asc','desc'])
   }
 
   sort(order: string): void {
-    this._orderSubject.next(order)
+    this._orderSubject.next(order);
   }
 }

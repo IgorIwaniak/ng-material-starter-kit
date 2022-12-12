@@ -19,6 +19,8 @@ import { CountryComponent } from './components/country/country.component';
 import { JokeComponent } from './components/joke/joke.component';
 import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
 import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
+import { SortedEmployeesListComponent } from './components/sorted-employees-list/sorted-employees-list.component';
+import { BeersComponent } from './components/beers/beers.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesComponentModule } from './components/categories/categories.component-module';
@@ -55,6 +57,10 @@ import { JokeComponentModule } from './components/joke/joke.component-module';
 import { JokeServiceModule } from './services/joke.service-module';
 import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
 import { SortedProductListComponentModule } from './components/sorted-product-list/sorted-product-list.component-module';
+import { SortedEmployeesListComponentModule } from './components/sorted-employees-list/sorted-employees-list.component-module';
+import { EmployeesServiceModule } from './services/employees.service-module';
+import { BeersComponentModule } from './components/beers/beers.component-module';
+import { BeersServiceModule } from './services/beers.service-module';
 
 @NgModule({
   imports: [
@@ -79,7 +85,9 @@ import { SortedProductListComponentModule } from './components/sorted-product-li
       { path: 'joke', component: JokeComponent },
       { path: 'products/:category', component: FilteredProductListComponent },
       { path: 'products', component: FilteredProductListComponent },
-      { path: 'productss', component: SortedProductListComponent }
+      { path: 'sorted-products', component: SortedProductListComponent },
+      { path: 'employees', component: SortedEmployeesListComponent },
+      { path: 'beers', component: BeersComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -116,7 +124,11 @@ import { SortedProductListComponentModule } from './components/sorted-product-li
     JokeComponentModule,
     JokeServiceModule,
     FilteredProductListComponentModule,
-    SortedProductListComponentModule
+    SortedProductListComponentModule,
+    SortedEmployeesListComponentModule,
+    EmployeesServiceModule,
+    BeersComponentModule,
+    BeersServiceModule
   ],
   exports: [RouterModule],
 })
