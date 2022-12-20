@@ -21,6 +21,7 @@ import { FilteredProductListComponent } from './components/filtered-product-list
 import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
 import { SortedEmployeesListComponent } from './components/sorted-employees-list/sorted-employees-list.component';
 import { BeersComponent } from './components/beers/beers.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesComponentModule } from './components/categories/categories.component-module';
@@ -61,6 +62,7 @@ import { SortedEmployeesListComponentModule } from './components/sorted-employee
 import { EmployeesServiceModule } from './services/employees.service-module';
 import { BeersComponentModule } from './components/beers/beers.component-module';
 import { BeersServiceModule } from './services/beers.service-module';
+import { ProductMasterDetailServiceModule } from './services/product-master-detail.service-module';
 
 @NgModule({
   imports: [
@@ -87,7 +89,8 @@ import { BeersServiceModule } from './services/beers.service-module';
       { path: 'products', component: FilteredProductListComponent },
       { path: 'sorted-products', component: SortedProductListComponent },
       { path: 'employees', component: SortedEmployeesListComponent },
-      { path: 'beers', component: BeersComponent }
+      { path: 'beers', component: BeersComponent },
+      { path: 'master', component: ProductListComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -128,7 +131,8 @@ import { BeersServiceModule } from './services/beers.service-module';
     SortedEmployeesListComponentModule,
     EmployeesServiceModule,
     BeersComponentModule,
-    BeersServiceModule
+    BeersServiceModule,
+    ProductMasterDetailServiceModule
   ],
   exports: [RouterModule],
 })

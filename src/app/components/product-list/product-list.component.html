@@ -1,4 +1,28 @@
-<mat-card><mat-card-title>Product list</mat-card-title>
-  <mat-card-content><mat-list role="list"><mat-list-item role="listitem" *ngFor="let item of product$ | async">{{item.title}} {{item.price}}$</mat-list-item></mat-list>
+<mat-grid-list cols="2" rowHeight="1:2">
+  <mat-grid-tile>
+    <mat-list role="list"><mat-list-item role="listitem" *ngFor="let item of list$ | async">{{item.title}}
+      <button mat-raised-button color="primary" (click)="selectProduct(item.id)">Show Details</button>
 
-  </mat-card-content></mat-card>
+    </mat-list-item></mat-list></mat-grid-tile>
+
+  <mat-grid-tile><ng-container *ngIf="details$ | async as item">{{ item.title }} {{item.price}}$ </ng-container></mat-grid-tile>
+</mat-grid-list>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

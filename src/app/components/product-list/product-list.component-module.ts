@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { ProductListComponent } from './product-list.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
-  imports: [MatCardModule, MatListModule, CommonModule],
+  imports: [MatCardModule, MatListModule, CommonModule, MatGridListModule, MatButtonModule],
   declarations: [ProductListComponent],
   providers: [],
   exports: [ProductListComponent]
